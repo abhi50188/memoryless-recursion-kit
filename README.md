@@ -124,12 +124,14 @@ The checks prove **structure, not correctness**: the system ends, connects, rewi
 1. **State the recursion before you write code:** n (what's left, read from a file), one step, and the base case.
 2. **Write the shape file** the way code is written, outside in: outermost level first, one line per level. (The proof will read it inside out.)
 
+   Each line: the level, the script(s) that run it, and what it gets from which level below.
+
    ```
-   deliver  | gets "batch" from build    | delivers
-   build    | gets "due list" from outer
-   outer    | gets "saved files" from inner | repeats over "pull"
-   inner    | gets "pull" from fetch
-   fetch    | from outside: the source
+   deliver  | deliver.py | gets "batch.json" from build    | delivers
+   build    | build.py   | gets "due.json" from outer
+   outer    | outer.py   | gets "saved" from inner         | repeats over "pull.json"
+   inner    | inner.py   | gets "pull.json" from fetch
+   fetch    | fetch.py   | from outside: the source
    ```
 
 3. **Check the design before building it:** `python3 checks/rewind.py shape.txt --design`. It answers "Rewinds," or names where it breaks.
