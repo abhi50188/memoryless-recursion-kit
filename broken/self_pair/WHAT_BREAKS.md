@@ -1,0 +1,1 @@
+deliver.py now checks the batch's count against itself, which always passes. Watch: Pairs stops.

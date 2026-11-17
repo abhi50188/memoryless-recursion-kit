@@ -1,0 +1,1 @@
+The README says the batch limit is 10; the code says 5. Watch: Sync stops.

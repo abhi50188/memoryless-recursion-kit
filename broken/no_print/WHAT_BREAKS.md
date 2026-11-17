@@ -1,0 +1,1 @@
+build.py no longer prints its step's line. Watch: Cancel stops (the README lists BUILD, nothing prints it).

@@ -1,0 +1,1 @@
+build now gets its due list in chat instead of a file. Watch: Rewind says MEMORY.

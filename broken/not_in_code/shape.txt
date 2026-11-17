@@ -1,0 +1,9 @@
+# The sample's shape, outermost level first, one line per level:
+#   level | script(s) | gets "<file>" from <level below>   (or: from outside: <what>)
+# optional parts:  | repeats over "<file>"   | delivers
+deliver | deliver.py | gets "batch.json" from build | delivers
+build   | build.py   | gets "due.json" from outer
+outer   | outer.py   | gets "read_log.jsonl" from read | repeats over "pull.json"
+read    | read.py    | gets "saved" from save
+save    | save.py    | gets "inbox.json" from fetch
+fetch   | fetch.py   | from outside: source

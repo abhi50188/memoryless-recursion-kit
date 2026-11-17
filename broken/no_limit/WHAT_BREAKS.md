@@ -1,0 +1,1 @@
+fetch.py now waits for new files in a loop with no way out. Watch: Ends stops.
