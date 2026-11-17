@@ -147,4 +147,4 @@ Sharma, A. (2026). *Memoryless recursions with a provability check: Files as the
 
 ## License
 
-The code is under the MIT License (see `LICENSE`), © 2026 Abhishek Sharma. The white paper is under CC BY 4.0.
+The code is under the MIT License (see `LICENSE`), © 2026 Abhi Sharma. The white paper is under CC BY 4.0.
